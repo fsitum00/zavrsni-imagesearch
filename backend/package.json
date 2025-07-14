@@ -1,0 +1,40 @@
+{
+  "name": "image-search-backend",
+  "version": "1.0.0",
+  "description": "Backend server for image search application using Weaviate",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon app.ts",
+    "start": "node dist/app.js",
+    "ingest": "ts-node src/scripts/ingest.ts"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "csv-parser": "^3.0.0",
+    "express": "^4.18.2",
+    "helmet": "^7.1.0",
+    "multer": "^1.4.5-lts.1",
+    "sharp": "^0.33.0",
+    "weaviate-client": "^3.6.2",
+    "weaviate-ts-client": "^2.2.0",
+    "zod": "^4.0.5"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/multer": "^1.4.11",
+    "@types/node": "^20.10.0",
+    "ts-node": "^10.9.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.0"
+  },
+  "keywords": [
+    "image-search",
+    "weaviate",
+    "vector-search",
+    "express"
+  ],
+  "author": "Frane Situm",
+  "license": "MIT"
+}
