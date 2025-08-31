@@ -4,6 +4,7 @@ import helmet from "helmet";
 import { initializeWeaviate } from "./lib";
 import { imageSearchRoute, textSearchRoute } from "./routes";
 import { errorHandler } from "./middleware";
+import "dotenv/config";
 
 const app = express();
 const PORT = process.env.PORT || 3001;
