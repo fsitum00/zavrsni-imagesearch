@@ -3,6 +3,7 @@ import csv from "csv-parser";
 import fs from "fs";
 import path from "path";
 import sharp from "sharp";
+import "dotenv/config";
 
 interface ImageData {
   image: string;
@@ -23,8 +24,8 @@ class DataIngestion {
   async initialize() {
     try {
       this.client = weaviate.client({
-        scheme: "http",
-        host: "http://localhost:8080",
+        scheme: process.env.WEAVIATE_PROTOCOL || "http",
+        host: process.env.WEAVIATE_BASE_URL || "http://localhost:8080",
       });
 
       try {
